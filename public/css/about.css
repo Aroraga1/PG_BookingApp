@@ -1,0 +1,110 @@
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1em;
+}
+
+.about-us {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 2em;
+}
+
+.about-content {
+    max-width: 800px;
+    text-align: left;
+}
+
+.about-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1em;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1em;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+
+.footimage{
+    width: 100%;
+    background-size: cover;
+    height: 60vh;
+    padding: 0 50px;
+}
+
+
+ .footer{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    background-color: rgba(116, 159, 216, 0.246);
+    border-radius: 12px;
+    border: 1px solid rgba(209, 213, 219, 0.3);
+ }
+
+ .weblogo{
+    width: 30vw;
+    padding: auto;
+    font-size: xx-large;
+    font-weight: 800;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+ }
+
+ .pages{
+    width: 15vw;
+    padding: auto;
+    font-size: larger;
+    font-weight: 400;
+    line-height: 5vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+ }
+
+ .servicess{
+    width: 15vw;
+    padding: auto;
+    font-size: larger;
+    font-weight: 400;
+    line-height: 5vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+ }
+
+ .contact{
+    width: 40vw;
+    padding: auto;
+    font-size: larger;
+    font-weight: 400;
+    line-height: 5vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+ }
+
+.footertxt{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center ;
+    background-color: rgba(116, 159, 216, 0.546);
+    font-size: large;
+    font-weight: 400;
+    text-align: center;
+    }

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{this.pgName}} - Room Details</title> <!-- Dynamic title based on page data -->
+    {{!-- <link rel="stylesheet" href="/css/room.css"> --}}
+    <link rel="stylesheet" href="/css/more.css">
+</head>
+<body>
+    {{> navbar}}
+
+    {{#each pgdata}}
+    <div class="fullcard">
+        {{!-- <div class="slider"> --}}
+            {{!-- <div class="slides"> --}}
+                {{!-- <div class="slide"> --}}
+                    <img class="pimg" src="/uploads/{{this.pic1}}" alt="Room Image"> <!-- Dynamic image source -->
+                {{!-- </div>   --}}
+            {{!-- </div> --}}
+        {{!-- </div> --}}
+        
+        <div class="alldetails">
+            <div class="card">
+                <div class="rooms">{{this.pgName}}</div> <!-- Dynamic room name -->
+
+                <!-- Features Section -->
+                <div class="aaram">
+                    <div class="faceliyie">Features</div>
+                    <div class="Features">
+                        {{#each this.features}}
+                        <div class="allfeatures">{{this}}</div>
+                        {{/each}}
+                    </div>
+                </div>
+
+                <!-- Facilities Section -->
+                <div class="feleliti">
+                    <div class="faceliyie">Facilities</div>
+                    <div class="Facalities">
+                        {{#each this.facilities}}
+                        <div class="allfacalitie">{{this}}</div>
+                        {{/each}}
+                    </div>
+                </div>
+
+                <!-- Suitability Section -->
+                <div class="suite">
+                    <div class="sutable">Suitable</div>
+                    <div class="Suitable">
+                        {{#each this.suitability}}
+                        <div class="Families">{{this}}</div>
+                        {{/each}}
+                    </div>
+                </div>
+
+                <!-- Rental Section -->
+                <div class="cost">
+                    <div class="Rantal">Rental</div>
+                    <div class="rupees">
+                        <div class="rupay">{{this.rental}}₹</div> <!-- Dynamic rental price -->
+                    </div>
+                </div>
+
+                <!-- Rating Section -->
+                <div class="Rate">
+                    <div class="Rating">Rating</div>
+                    <div class="rates">
+                        <div class="atributes_rate">{{this.rating}}</div> <!-- Dynamic rating -->
+                        <div class="atributes_rate">{{this.peopleCount}} People</div> <!-- Dynamic people count -->
+                    </div>
+                </div>
+
+                <!-- Description Section -->
+                <div class="full_describe_box">
+                    <div class="description">{{this.description}}</div> <!-- Dynamic description -->
+                </div>
+            </div>
+        </div>
+    </div>
+    {{/each}}
+
+</body>
+</html>

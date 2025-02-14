@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SelectOne</title>
+    <style>
+        body{
+        height: 90vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: auto;
+        }
+        .select{
+            width: 45vw;
+            border: 0.5px solid purple;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 12px;
+            border-radius: 15px;
+            background-color: purple;
+            filter: blur(0.3px);
+        }
+        a{
+            width: 20vw;
+            height: 20vh;
+            border: 3px solid white;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: auto;
+            border-radius: 15px;
+            text-decoration: none;
+        }
+        h2,p{
+            font-size: large;
+            color: white;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            text-align: center;
+            text-decoration: none;
+            text-underline-offset: none;
+            font-style: none;
+        }
+    </style>
+</head>
+<body>
+    {{!-- {{>navbar}} --}}
+    <div class="select">
+    <a href="/register">
+        <h2>Signup as an User</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>        
+    </a>
+        <a href="/register">
+        <h2>Signup as an Owner</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>        
+    </a>
+    </div>
+</body>
+</html>

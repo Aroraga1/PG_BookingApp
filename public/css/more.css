@@ -1,0 +1,208 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif; /* Modern Font */
+}
+
+/* Full Card Styling */
+.fullcard {
+    width: 85%;
+    margin: 30px auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding: 25px;
+    border-radius: 18px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+    justify-content: space-between;
+    background-color: #fff;
+    transition: all 0.3s ease;
+}
+
+.fullcard:hover {
+    transform: scale(1.02);
+}
+
+/* Image Styling */
+.pimg {
+    width: 45%;
+    height: 60vh;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Slider Container
+.slider {
+    width: 100%;
+    max-height: 55vh;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 25px;
+    border-radius: 10px;
+}
+
+.slides {
+    display: inline-flex;
+}
+
+.slide {
+    min-width: 100%;
+    transition: transform 0.8s ease-in-out;
+} */
+
+/* Card and Details */
+.alldetails {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    gap: 20px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+/* Section Titles */
+.rooms, .faceliyie, .sutable, .Rantal, .Rating {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #222;
+}
+
+/* Feature and Facility List */
+.Features, .Facalities, .Suitable {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.allfeatures, .allfacalitie, .Families {
+    background-color: rgba(220, 232, 243, 0.8);
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+.allfeatures:hover, .allfacalitie:hover, .Families:hover {
+    background-color: rgba(116, 159, 216, 0.6);
+    transform: scale(1.1);
+}
+
+/* Cost Section */
+.rupees {
+    display: flex;
+    align-items: center;
+}
+
+.rupay {
+    color: #e63946;
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+/* Rating Section */
+.rates {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.atributes_rate {
+    background-color: rgba(220, 232, 243, 0.8);
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+.atributes_rate:hover {
+    background-color: rgba(116, 159, 216, 0.6);
+    transform: scale(1.1);
+}
+
+/* Description Box */
+.full_describe_box {
+    width: 100%;
+    background-color: rgba(220, 232, 243, 0.2);
+    padding: 18px;
+    border-radius: 18px;
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: #333;
+    margin-top: 25px;
+    transition: all 0.3s ease;
+}
+
+.full_describe_box:hover {
+    background-color: rgba(116, 159, 216, 0.2);
+}
+
+/* Footer Styling */
+footer {
+    width: 100%;
+    background-color: rgba(116, 159, 216, 0.3);
+    padding: 25px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+footer .weblogo, footer .pages, footer .servicess, footer .contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 22%;
+    font-size: 1.25rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+footer .weblogo {
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+footer .footertxt {
+    width: 100%;
+    height: 55px;
+    background-color: rgba(116, 159, 216, 0.5);
+    color: #333;
+    text-align: center;
+    line-height: 55px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    border-radius: 10px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .fullcard {
+        flex-direction: column;
+        width: 92%;
+    }
+
+    .alldetails {
+        width: 100%;
+    }
+
+    footer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer .weblogo, footer .pages, footer .servicess, footer .contact {
+        width: 100%;
+        margin-bottom: 18px;
+    }
+}

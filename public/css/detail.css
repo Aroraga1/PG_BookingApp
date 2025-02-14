@@ -1,0 +1,157 @@
+/* Reset and General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #f8f9fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+.fullcard {
+    width: 80vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    margin: auto;
+}
+
+/* Photo Section */
+.photosection {
+    width: 70%;
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: auto;
+}
+
+.section-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.slidebar {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sli img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.btns {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-nav {
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-nav:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+/* PG Details Section */
+.alldetails {
+    width: 25%;
+    margin: auto;
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.pg-title {
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    color: #007bff;
+}
+
+.details-section, .cost-section, .rating-section, .description-section {
+    margin-top: 20px;
+}
+
+.section-header {
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-bottom: 2px solid #007bff;
+    display: inline-block;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style: none;
+    padding-left: 10px;
+}
+
+.feature-item, .facility-item, .suitable-item {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+.feature-item i, .facility-item i, .suitable-item i {
+    color: #007bff;
+    margin-right: 8px;
+}
+
+.rental-price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #28a745;
+}
+
+.rating-info {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ffc107;
+}
+
+.description-text {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #666;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .fullcard {
+        padding: 10px;
+    }
+    .pg-title {
+        font-size: 1.5rem;
+    }
+    .section-header {
+        font-size: 1.2rem;
+    }
+}

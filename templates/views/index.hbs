@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Take_YR_PG</title>
+
+    <!-- Bootstrap & Custom CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+
+</head>
+<body>  
+
+    {{!-- Navbar --}}
+    {{> navbar}} 
+
+    {{!-- Hero Section --}}
+    {{> slidebar}} 
+
+    <!-- Section: Best Places -->
+    <section>
+        <h2 class="heading">Best Places to Enjoy Your Stay</h2>
+        <div class="card-layout">
+            {{#each randomPgdata}}
+                <a href="/details/{{this._id}}" class="card-link">
+                    <div class="card">
+                        <img class="card-img" src="/uploads/{{this.pic1}}" alt="{{this.Oname}}">
+                        <div class="card-content">
+                            <h3 class="card-title">{{this.Oname}}</h3>
+                            <p class="card-description">Premium Stay Experience</p>
+                        </div>
+                    </div>
+                </a>
+            {{/each}}
+        </div>
+        <div class="more-section">
+            <a href="/more"><button class="btn-more">More Rooms</button></a>
+        </div>
+    </section>
+
+    {{!-- <!-- Section: Nearest PGs -->
+    <section>
+        <h2 class="heading">Your Nearest PGs</h2>
+        <div class="card-layout">
+            {{#each nearestPgs}}
+                <div class="card">
+                    <img class="card-img" src="/uploads/{{this.pic}}" alt="{{this.name}}">
+                    <div class="card-content">
+                        <h3 class="card-title">{{this.name}}</h3>
+                        <p class="card-description">{{this.description}}</p>
+                    </div>
+                </div>
+            {{/each}}
+        </div>
+        <div class="more-section">
+            <a href="/more"><button class="btn-more">More Rooms</button></a>
+        </div>
+    </section>
+
+    <!-- Section: Nearest Hostels -->
+    <section>
+        <h2 class="heading">Your Nearest Hostels</h2>
+        <div class="card-layout">
+            {{#each nearestHostels}}
+                <div class="card">
+                    <img class="card-img" src="/uploads/{{this.pic}}" alt="{{this.name}}">
+                    <div class="card-content">
+                        <h3 class="card-title">{{this.name}}</h3>
+                        <p class="card-description">{{this.description}}</p>
+                    </div>
+                </div>
+            {{/each}}
+        </div>
+        <div class="more-section">
+            <a href="/more"><button class="btn-more">More Rooms</button></a>
+        </div>
+    </section> --}}
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">Take_YR_PG</div>
+            <div class="footer-links">
+                <a href="/">Home</a>
+                <a href="/rooms">Rooms</a>
+                <a href="/hostels">Hostels</a>
+                <a href="/about">About Us</a>
+                <a href="/register">Register</a>
+            </div>
+            <div class="footer-services">
+                <a href="/pg-booking">PG Booking</a>
+                <a href="/hostel-booking">Hostel Booking</a>
+                <a href="/room-booking">Room Booking</a>
+            </div>
+            <div class="footer-contact">
+                <p>📞 8955273002</p>
+                <p>📧 takeyrpg@gmail.com</p>
+                <p>📍 Akshay Patrey, Jagatpura, Jaipur</p>
+            </div>
+        </div>
+        {{!-- <p class="footer-text">This Website made by Garvit Arora</p> --}}
+    </footer>
+
+    <!-- JavaScript for Slider -->
+    <script>
+        const slides = document.querySelectorAll(".slide");
+        let counter = 0;
+
+        slides.forEach((slide, index) => {
+            slide.style.left = `${index * 100}%`;
+        });
+
+        const prev = () => {
+            counter--;
+            slideImage();
+        };
+
+        const next = () => {
+            counter++;
+            slideImage();
+        };
+
+        const slideImage = () => {
+            slides.forEach((slide) => {
+                slide.style.transform = `translateX(-${counter * 100}%)`;
+            });
+        };
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  // Check if the URL is the login page or home page and reload
+  if (window.location.pathname === '/login') {
+    window.onload = () => {
+      // If the user is logged in, redirect to the home page automatically
+      if (document.cookie.includes('jwt')) {
+        window.location.href = '/index';  // Redirect to home page
+      }
+    };
+  }
+
+  //if (window.location.pathname === '/index') {
+    //window.onload = () => {
+      // If the user is logged in, you can show the content
+      //if (!document.cookie.includes('jwt')) {
+        //window.location.href = '/login';  // Redirect to login if no jwt is found
+      //}
+    //};
+  //}
+</script>
+
+</body>
+</html>

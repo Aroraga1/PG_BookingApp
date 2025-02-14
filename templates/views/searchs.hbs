@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search PG Listings</title>
+    <link rel="stylesheet" href="/css/search.css">
+</head>
+<body>
+
+    <!-- Search Form -->
+    <div class="search-container">
+        <form action="/searchs" method="GET">
+            <input type="text" name="address" placeholder="Search by Address" required>
+            <button type="submit">Search</button>
+        </form>
+    </div>
+
+    <!-- Display Results if any -->
+    <div class="pg-results">
+        {{#if pgList.length}}
+            <div class="pg-cards-container">
+                {{#each pgList}}
+                    <div class="pg-card">
+                        <h3>{{this.pgName}}</h3>
+                        <p><strong>Address:</strong> {{this.address}}</p>
+                        <p><strong>Rental:</strong> ₹{{this.rental}}</p>
+                        <p>{{this.description}}</p>
+                        <p><strong>Owner:</strong> {{this.ownerName}}</p>
+                        <div class="images">
+                            {{#each this.pics}}
+                                <img src="{{this}}" alt="Image" class="pg-image">
+                            {{/each}}
+                        </div>
+                        <a href="/details/{{this._id}}" class="view-details">View Details</a>
+                    </div>
+                {{/each}}
+            </div>
+        {{else}}
+            <p>No PGs found for the given address.</p>
+        {{/if}}
+    </div>
+
+</body>
+</html>

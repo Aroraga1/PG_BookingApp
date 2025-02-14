@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/upload.css">
+    {{!-- <link rel="stylesheet" href="/css/register.css"> --}}
+    <style>
+        img{
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+     {{!-- enctype="multipart/form-data" --}}
+    <form action="/upload" method="POST" enctype="multipart/form-data">
+    <h1>Upload Your PG or Room Here..</h1>
+    <h2>Owner Details</h2>
+    <input type="text" name="Oname" placeholder="Name">
+    <input type="number" name="Oph" placeholder="Phone number">
+    <input type="email" name="Oemail" placeholder="E-mail">
+    <input type="text" name="Oadd" placeholder="Your personal Address..">
+    <br>
+    <h2>PG/Room Details</h2>
+    <input type="text" name="pgName" placeholder="Name">
+    <input type="text" name="features" placeholder="Features">
+    <input type="text" name="facilities" placeholder="Facilities">
+    <input type="text" name="suitability" placeholder="Suitability...like Family/Boys">
+    <input type="number" name="rental" placeholder="Rental">
+    <input type="text" name="address" placeholder="Address..">
+    <input type="text" name="description" placeholder="Description..">
+    <input type="file" name="pic1">
+    <input type="file" name="pic2">
+    <input type="file" name="pic3">
+    <button type="submit" value="uploadm">Submit Details</button>
+    </form>
+</body>
+</html>

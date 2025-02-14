@@ -1,0 +1,148 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+/* PG Card */
+.fullcard {
+    width: 90%;
+    max-width: 800px;
+    background: #fff;
+    margin: 20px auto;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.fullcard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Image */
+.picture img {
+    width: 100%;
+    max-height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Details Section */
+.alldetails {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.rooms {
+    font-size: 22px;
+    font-weight: 600;
+    color: #007bff;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* Features, Facilities & Suitability */
+.aaram, .feleliti, .suite, .khana, .cost, .Rate {
+    background: #f0f0f0;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.faceliyie, .sutable, .Khana, .Rantal, .Rating {
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+/* Lists */
+.Features, .Facalities, .Suitable, .khane, .rupees, .rates {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.allfeatures, .allfacalitie, .Families, .bhojan, .rupay, .atributes_rate {
+    background: #007bff;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* Booking Buttons */
+.bookingbtns {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.BM {
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.BM:hover {
+    background: #218838;
+}
+
+/* Footer */
+.footer {
+    background: #343a40;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.weblogo {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.pages, .servicess {
+    margin: 10px 0;
+}
+
+.pages a, .servicess a {
+    color: white;
+    margin: 0 10px;
+    font-size: 14px;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.pages a:hover, .servicess a:hover {
+    color: #007bff;
+}
+
+/* Contact Section */
+.contact {
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+/* Footer Text */
+.footertxt {
+    font-size: 12px;
+    margin-top: 10px;
+    opacity: 0.7;
+}

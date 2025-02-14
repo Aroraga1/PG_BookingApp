@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/register.css">
+</head>
+<body>
+    {{!-- {{>navbar}} --}}
+        <form action="/register" method="POST">
+        <h1>Register Here!</h1>
+    <input type="text" name="username" placeholder="name">
+    <input type="text" name="phoneNo" placeholder="Phone number">
+    <input type="text" name="email" placeholder="Email->">
+    <input type="password" name="password" placeholder="Password">
+    <input type="password" name="cpassword" placeholder="Confirm Password">
+     <div class="buttons">
+     <select id="accountType" name="accountType">
+            <option value="user">User</option>
+            <option value="owner">Owner</option>
+        </select>
+    <button type="submit" value="Register">Submit</button>
+    </div>
+    <div>
+            <h4>Already Have an account?</h4>
+    <a href="/login">Login</a>
+    </div>
+    </form>
+    <script>
+  // Check if the URL is the login page or home page and reload
+ 
+</script>
+
+</body>
+</html>

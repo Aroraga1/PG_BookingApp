@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hostel Listings</title>
+    {{!-- <link rel="stylesheet" href="/css/navbar.css"> --}}
+    <link rel="stylesheet" href="/css/hostel.css">
+</head>
+<body>
+
+    {{> navbar}}  
+
+    {{#each pgdata}}
+    <div class="fullcard">
+        <!-- PG Image -->
+        <div class="picture">
+            <img src="/uploads/{{pic1}}" alt="{{pgName}}">
+        </div>
+
+        <!-- PG Details -->
+        <div class="alldetails">
+            <div class="rooms">{{pgName}}</div> <!-- Dynamic PG Name -->
+
+            <!-- Features -->
+            <div class="aaram">
+                <div class="faceliyie">Features</div>
+                <div class="Features">
+                    {{#each features}}
+                        <div class="allfeatures">{{this}}</div>
+                    {{/each}}
+                </div>
+            </div>
+
+            <!-- Facilities -->
+            <div class="feleliti">
+                <div class="faceliyie">Facilities</div>
+                <div class="Facalities">
+                    {{#each facilities}}
+                        <div class="allfacalitie">{{this}}</div>
+                    {{/each}}
+                </div>
+            </div>
+
+            <!-- Suitability -->
+            <div class="suite">
+                <div class="sutable">Suitable For</div>
+                <div class="Suitable">
+                    {{#each suitablity}}
+                        <div class="Families">{{this}}</div>
+                    {{/each}}
+                </div>
+            </div>
+
+            <!-- Meal Plan -->
+            <div class="khana">
+                <div class="Khana">Meal:</div>
+                <div class="khane">
+                    <div class="bhojan">3 Times</div>
+                    <div id="bhojana" class="bhojan">Vegetarian</div>
+                </div>
+            </div>
+
+            <!-- Rental -->
+            <div class="cost">
+                <div class="Rantal">Rental</div>
+                <div class="rupees">
+                    <div class="rupay">{{rental}} ₹ / month</div>
+                </div>
+            </div>
+
+            <!-- Rating (Placeholder for now) -->
+            <div class="Rate">
+                <div class="Rating">Rating</div>
+                <div class="rates">
+                    <div class="atributes_rate">4.3</div>
+                    <div class="atributes_rate">4 People</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Booking Buttons -->
+        <div class="bookingbtns">
+            <a href="/more/{{_id}}"><button class="BM">More Details</button></a>
+            <button class="BM">Book Now</button>
+        </div>
+    </div>
+    {{/each}}
+
+    <!-- Footer -->
+    <div class="footer">
+        <div class="weblogo">Take_YR_PG</div>
+        <div class="pages">
+            <a href="/">Home</a>
+            <a href="/rooms">Rooms</a>
+            <a href="/hostel">Hostel</a>
+            <a href="/about">About Us</a>
+            <a href="/register">Register</a>
+        </div>
+        <div class="servicess">
+            <a href="/pg_book">PG Book</a>
+            <a href="/hostel_book">Hostel Book</a>
+            <a href="/room_book">Room Book</a>
+        </div>
+        <div class="contact">
+            <div class="nober">Mob NO: 8955273002</div>
+            <div class="email">Email ID: takeyrpg@gmail.com</div>
+            <div class="addres">Akshay Patrey, Jagatpura, Jaipur</div>
+        </div>
+    </div>
+
+    {{!-- <div class="footertxt">This Website made By Garvit Arora</div> --}}
+
+</body>
+</html>

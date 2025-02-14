@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar</title>
+    <link rel="stylesheet" href="/css/navbar.css">
+    <style>
+        .profile {
+            display: inline-block;
+            font-size: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            background-color: #ccc;
+            padding: 5px 10px;
+            border-radius: 50%;
+            text-align: center;
+        }
+
+        .idcard {
+            display: none; /* Initially hidden */
+            position: absolute;
+            background-color: white;
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-top: 10px;
+            right: 0;
+        }
+
+        .idname {
+            margin-bottom: 10px;
+        }
+
+        .logoutBtn {
+            color: red;
+            text-decoration: none;
+        }
+
+        /* Add any additional styles for the profile menu here */
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">Take_YR_PG</div>
+        <div class="nav-attributes">
+            <form method="GET" action="/searchs">
+                <input type="text" name="search" placeholder="Search Place" class="search">
+                <button class="searchB" type="submit">Search</button>
+            </form>
+            <a href="/index">Home</a>
+            <a href="/room">Rooms</a>
+            <a href="/hostel">Hostels</a>
+            <a href="/about">About Us</a>
+
+            {{#if isLoggedIn}}
+                {{#eq userData.accountType "owner"}}
+                    <a href="/upload" class="upload">+</a> <!-- Upload page icon -->
+                {{/eq}}
+                
+                <!-- Profile Section with the first character of username -->
+                <div class="profile" id="profilePic">{{userData.username}}</div>
+                <div class="idcard" id="profileMenu">
+                    <div class="idname">{{UserData.username}}</div>
+                    <a href="/logout" class="logoutBtn">Logout</a>  
+                </div>
+
+            {{else}}
+                <a href="/register"><button class="signu">SignUp</button></a>
+            {{/if}}
+        </div>
+    </nav>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const profilePic = document.getElementById("profilePic");
+            const profileMenu = document.getElementById("profileMenu");
+
+            let isProfileMenuOpen = false; // Boolean to track if the profile menu is open or closed
+
+            // Handle profile pic click to toggle menu
+            profilePic.addEventListener('click', (event) => {
+                event.stopPropagation(); // Prevent the click event from propagating
+
+                if (isProfileMenuOpen) {
+                    // If the menu is open, close it
+                    profileMenu.style.display = "none";
+                    isProfileMenuOpen = false;
+                } else {
+                    // If the menu is closed, open it
+                    profileMenu.style.display = "block";
+                    isProfileMenuOpen = true;
+                }
+            });
+
+            // Close the profile menu if the user clicks outside the profile menu or the profile icon
+            document.addEventListener("click", (event) => {
+                if (!profilePic.contains(event.target) && !profileMenu.contains(event.target)) {
+                    if (isProfileMenuOpen) {
+                        // Close the menu and update the Boolean
+                        profileMenu.style.display = "none";
+                        isProfileMenuOpen = false;
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Token Expired</title>
+    <link rel="stylesheet" href="/css/logout.css"> <!-- Link to your CSS -->
+</head>
+<body>
+    <div class="container">
+        <div class="message-box">
+            <h1>Oops! Your session has expired</h1>
+            <p>You have to login again, Token Expired</p>
+            <a href="/login" class="login-btn">Go to Login</a>
+        </div>
+    </div>
+    <script>
+  // Check if the URL is the login page or home page and reload
+  if (window.location.pathname === '/login') {
+    window.onload = () => {
+      // If the user is logged in, redirect to the home page automatically
+      if (document.cookie.includes('jwt')) {
+        window.location.href = '/index';  // Redirect to home page
+      }
+    };
+  }
+
+  if (window.location.pathname === '/index') {
+    window.onload = () => {
+      // If the user is logged in, you can show the content
+      if (!document.cookie.includes('jwt')) {
+        window.location.href = '/login';  // Redirect to login if no jwt is found
+      }
+    };
+  }
+</script>
+
+</body>
+</html>

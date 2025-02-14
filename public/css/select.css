@@ -1,0 +1,12 @@
+        body{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            margin: auto;
+        }
+        a{
+            width: 10vw;
+            font-size: larger;
+            border: 1px solid purple;
+        }

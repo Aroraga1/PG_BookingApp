@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="/css/login.css"> <!-- You can keep the existing link if you're using external CSS -->
+</head>
+<body>
+    <form action="/login" method="POST">
+        <h1>Login Here!</h1>
+        <input type="text" name="username" placeholder="Username" required>
+        <input type="password" name="password" placeholder="Password" required>
+        <button type="submit">Submit</button>
+        <div>
+            <h4>Don't have an account?</h4>
+            <a href="/register">Register</a>
+        </div>
+    </form>
+    <script>
+  // Check if the URL is the login page or home page and reload
+  if (window.location.pathname === '/login') {
+    window.onload = () => {
+      // If the user is logged in, redirect to the home page automatically
+      if (document.cookie.includes('jwt')) {
+        window.location.href = '/index';  // Redirect to home page
+      }
+    };
+  }
+
+  if (window.location.pathname === '/index') {
+    window.onload = () => {
+      // If the user is logged in, you can show the content
+      if (!document.cookie.includes('jwt')) {
+        window.location.href = '/login';  // Redirect to login if no jwt is found
+      }
+    };
+  }
+</script>
+
+</body>
+</html>
